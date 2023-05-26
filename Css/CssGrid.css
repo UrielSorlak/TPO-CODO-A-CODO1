@@ -1,0 +1,23 @@
+
+
+  
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 9fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    
+}
+
+header, footer {
+    grid-column: span 4;
+}
+
+aside {
+    grid-row: span 2;
+}
+
+main {
+    grid-column: span 3;
+}
