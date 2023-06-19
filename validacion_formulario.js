@@ -4,6 +4,8 @@ function validateForm(event) {
     var form = document.getElementById('myForm');
     formulario.addEventListener("submit", function(event) {
         
+       
+         event.preventDefault();
       });
     var nombre = document.getElementById('nombre').value.trim();
     var email = document.getElementById('email').value.trim();
@@ -28,6 +30,7 @@ function validateForm(event) {
     }
 
     
+   
     sendEmail(nombre, email, opinion);
 }
 
