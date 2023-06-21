@@ -43,25 +43,25 @@
 
 }
 .container{
-    background-color: rgb(255, 247, 212);
+    background-color: rgb(231, 206, 166);
   }
   
   aside {
-    background-color: rgb(236, 205, 180);
+    background-color: rgb(90, 150, 227);
   }
   
   main {
-    background-color: rgb(236, 205, 180);
+    background-color: rgb(90, 150, 227);
   }
   header{
-    background-color: rgb(254, 161, 161);
+    background-color: rgb(10, 110, 189);
   }
   footer{
-    background-color: rgb(254, 161, 161);
+    background-color: rgb(10, 110, 189);
   }
   
   .receta{ 
-    background-color:  rgb(240, 237, 212);
+    background-color:  rgb(231, 206, 166);
   }
   nav {
     display: flex;
