@@ -1,8 +1,8 @@
 /* style_index.css */
 
 /* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
+.body {
+  
   margin: 0;
   padding: 0;
 }
@@ -97,16 +97,16 @@ body {
   font-size: 14px;
 }
 
-.h1{
+h1{
   margin-left: 300px;
   font-family: cursive;
 }
 
-.body{
-  background-color:rgb(255, 244, 244);
+body{
+  background-color:rgb(255,244,244);
 }
 
-.body{
+body{
   display: flex;
     flex-wrap: wrap;
 }
