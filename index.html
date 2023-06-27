@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitalia</title>
     <link rel="stylesheet" href="style_index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -75,6 +76,28 @@
         <!-- Pie de pág -->
         <footer class="footer">
             <!-- Contenido del pie de página -->
+            <div id="resultado-api"></div>
+            <script>
+                $(document).ready(function() {
+                    $.ajax({
+                        url: 'www.thecocktaildb.com/api/json/v1/1/random.php', // Reemplaza con la URL de la API que deseas utilizar
+                        method: 'GET',
+                        success: function(response) {
+                            // Manipula los datos recibidos de la API
+                            // Puedes acceder a los datos en la variable 'response'
+                            // Por ejemplo, puedes mostrar los nombres de las recetas en el elemento con id 'resultado-api'
+                            var resultado = '';
+                            response.recetas.forEach(function(receta) {
+                                resultado += '<p>' + receta.nombre + '</p>';
+                            });
+                            $('#resultado-api').html(resultado);
+                        },
+                        error: function(error) {
+                            console.log(error);
+                        }
+                    });
+                });
+            </script>
         </footer>
     </div>
 </body>
