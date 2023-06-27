@@ -35,17 +35,23 @@ nav{
     text-align:end;
 }
 nav {
-  background-color: blue; /* Cambia el color de fondo a azul */
-}
-
-nav a {
-  color: white; /* Cambia el color de letra a blanco */
-}
-
-nav a:hover {
-  color: violet; /* Cambia el color de letra a violeta al pasar el cursor por encima */
-}
-
-nav a:active {
-  color: violet; /* Cambia el color de letra a violeta cuando se hace clic en el enlace */
-}
+	background-color: blue; /* Cambia el color de fondo a azul */
+	text-align: right; /* Alinea el contenido a la derecha */
+	padding: 10px; /* Agrega un espacio alrededor del contenido */
+  }
+  
+  
+  
+  nav a{
+	display: inline-block; /* Muestra los elementos en línea */
+  }
+  
+  nav a {
+	color: white; /* Cambia el color de letra a blanco */
+	padding: 10px; /* Agrega un espacio interno alrededor del enlace */
+	text-decoration: none; /* Quita la decoración de enlace */
+  }
+  
+  nav a:hover {
+	color: violet; /* Cambia el color de letra a violeta al pasar el cursor por encima */
+  }
