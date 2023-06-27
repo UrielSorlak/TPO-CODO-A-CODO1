@@ -80,14 +80,16 @@
             <script>
                 $(document).ready(function () {
                     $.ajax({
-                        url: `https://www.themealdb.com/api/json/v1/1/random.php`,
+                        url: 'https://www.themealdb.com/api/json/v1/1/random.php',
                         method: 'GET',
                         success: function (response) {
-                            var resultado = '';
-                            response.meal.forEach(function (receta) {
-                                resultado += '<p>' + receta.meal + '</p>';
-                            });
-                            $('#resultado-api').html(resultado);
+                            var recipe = response.meals[0];
+                            var recipeName = recipe.strMeal;
+                            var recipeInstructions = recipe.strInstructions;
+
+                            // Mostrar el nombre de la receta y las instrucciones en tu página web
+                            $('#recipe-name').text(recipeName);
+                            $('#recipe-instructions').text(recipeInstructions);
                         },
                         error: function (error) {
                             console.log(error);
