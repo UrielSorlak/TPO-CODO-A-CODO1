@@ -84,8 +84,8 @@
                         method: 'GET',
                         success: function (response) {
                             var resultado = '';
-                            response.drinks.forEach(function (receta) {
-                                resultado += '<p>' + receta.strDrink + '</p>';
+                            response.meal.forEach(function (receta) {
+                                resultado += '<p>' + receta.meal + '</p>';
                             });
                             $('#resultado-api').html(resultado);
                         },
