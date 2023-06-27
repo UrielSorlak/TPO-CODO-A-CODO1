@@ -16,7 +16,7 @@
         <header class="header">
             <h1>Vitalia</h1>
             <nav>
-               
+
                 <a href="html_acerca_de.html">Acerca de</a>
                 <a href="html_contacto.html">Contacto</a>
             </nav>
@@ -35,14 +35,14 @@
                     <div class="col">
                         <!-- aca va el link de desayuno -->
                         <a href="html_desayuno.html">
-                            <img src="imagenes/Desayuno.jpg"alt="Desayuno">
+                            <img src="imagenes/Desayuno.jpg" alt="Desayuno">
                             <div class="overlay">
                                 <span>Desayuno</span>
                             </div>
                         </a>
                     </div>
                     <div class="col">
-                         <!-- aca  va el link de almuerzo -->
+                        <!-- aca  va el link de almuerzo -->
                         <a href="html_almuerzo.html">
                             <img src="imagenes/Almuerzo.jpg" alt="Almuerzo">
                             <div class="overlay">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                         <!-- aca va el link de merienda-->
+                        <!-- aca va el link de merienda-->
                         <a href="html_merienda.html">
                             <img src="imagenes/Merienda.jpg" alt="Merienda">
                             <div class="overlay">
@@ -62,7 +62,7 @@
                         </a>
                     </div>
                     <div class="col">
-                         <!-- aca va el link de cena -->
+                        <!-- aca va el link de cena -->
                         <a href="html_cena.html">
                             <img src="imagenes/Cena.jpg" alt="Cena">
                             <div class="overlay">
@@ -78,18 +78,18 @@
             <!-- Contenido del pie de página -->
             <div id="resultado-api"></div>
             <script>
-                $(document).ready(function() {
-    $.ajax({
-        url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php', 
-        method: 'GET',
-        success: function(response) {
-            var resultado = '';
-            response.drinks.forEach(function(receta) {
-                resultado += '<p>' + receta.strDrink + '</p>';
-            });
-            $('#resultado-api').html(resultado);
+                $(document).ready(function () {
+                    $.ajax({
+                        url: `https://www.themealdb.com/api/json/v1/1/random.php`,
+                        method: 'GET',
+                        success: function (response) {
+                            var resultado = '';
+                            response.drinks.forEach(function (receta) {
+                                resultado += '<p>' + receta.strDrink + '</p>';
+                            });
+                            $('#resultado-api').html(resultado);
                         },
-                        error: function(error) {
+                        error: function (error) {
                             console.log(error);
                         }
                     });
