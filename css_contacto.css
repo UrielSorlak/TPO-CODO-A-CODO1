@@ -33,5 +33,19 @@ footer {
 }
 nav{
     text-align:end;
-	color:#fff
+}
+nav {
+  background-color: blue; /* Cambia el color de fondo a azul */
+}
+
+nav a {
+  color: white; /* Cambia el color de letra a blanco */
+}
+
+nav a:hover {
+  color: violet; /* Cambia el color de letra a violeta al pasar el cursor por encima */
+}
+
+nav a:active {
+  color: violet; /* Cambia el color de letra a violeta cuando se hace clic en el enlace */
 }
