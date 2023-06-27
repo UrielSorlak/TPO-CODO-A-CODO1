@@ -79,16 +79,15 @@
             <div id="resultado-api"></div>
             <script>
                 $(document).ready(function() {
-                    $.ajax({
-                        url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php', 
-                        method: 'GET',
-                        success: function(response) {
-                            
-                            var resultado = '';
-                            response.drinks.forEach(function(drinks) {
-                                resultado += '<p>' + drinks.nombre + '</p>';
-                            });
-                            $('#resultado-api').html(resultado);
+    $.ajax({
+        url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php', 
+        method: 'GET',
+        success: function(response) {
+            var resultado = '';
+            response.drinks.forEach(function(receta) {
+                resultado += '<p>' + receta.strDrink + '</p>';
+            });
+            $('#resultado-api').html(resultado);
                         },
                         error: function(error) {
                             console.log(error);
