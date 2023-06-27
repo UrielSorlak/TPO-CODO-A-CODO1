@@ -31,23 +31,10 @@ footer {
 	padding: 10px;
 	text-align: center;
 }
-nav{
-    text-align:end;
-}
 nav {
 	background-color: blue; /* Cambia el color de fondo a azul */
 	text-align: right; /* Alinea el contenido a la derecha */
 	padding: 10px; /* Agrega un espacio alrededor del contenido */
-  }
-  
-  nav  {
-	list-style-type: none; /* Quita los puntos de la lista */
-	margin: 0; /* Quita el margen */
-	padding: 0; /* Quita el espacio interno */
-  }
-  
-  nav a{
-	display: inline-block; /* Muestra los elementos en línea */
   }
   
   nav a {
