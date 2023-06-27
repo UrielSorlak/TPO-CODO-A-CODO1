@@ -1,72 +1,27 @@
-function validateForm(event) {
-    event.preventDefault(); 
-
-    var form = document.getElementById('myForm');
-    formulario.addEventListener("submit", function(event) {
-        
-       
-         event.preventDefault();
-      });
-    var nombre = document.getElementById('nombre').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var opinion = document.getElementById('opinion').value.trim();
-
-    if (nombre === '') {
-        alert('Por favor, ingrese su nombre.');
-        return false;
-    }
-
-    if (email === '') {
-        alert('Por favor, ingrese su email.');
-        return false;
+document.getElementById("formulario-sugerencias").addEventListener("submit", function(event) {
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var opinion = document.getElementById("opinion").value;
+    
+    if (nombre === "" || email === "" || opinion === "") {
+      alert("Por favor, completa todos los campos.");
+      event.preventDefault();
     } else if (!validateEmail(email)) {
-        alert('Por favor, ingrese un email válido.');
-        return false;
+      alert("Por favor, ingresa un correo electrónico válido.");
+      event.preventDefault();
     }
+  });
+  
+  function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
 
-    if (opinion === '') {
-        alert('Por favor, ingrese su opinión.');
-        return false;
+  document.getElementById("formulario-evaluacion").addEventListener("submit", function(event) {
+    var satisfaccion = document.querySelector('input[name="satisfaccion"]:checked');
+    
+    if (!satisfaccion) {
+      alert("Por favor, selecciona una opción de satisfacción.");
+      event.preventDefault();
     }
-
-    
-   
-    sendEmail(nombre, email, opinion);
-}
-
-function validateEmail(email) {
-    
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-function sendEmail(nombre, email, opinion) {
-    
-
-    
-    var payload = {
-        nombre: nombre,
-        email: email,
-        opinion: opinion
-    };
-
-    fetch('https://api.example.com/send-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-    })
-    .then(function(response) {
-        if (response.ok) {
-            alert('¡Email enviado con éxito!');
-            
-        } else {
-            alert('Hubo un error al enviar el email. Por favor, inténtelo nuevamente.');
-        }
-    })
-    .catch(function(error) {
-        alert('Hubo un error al enviar el email. Por favor, inténtelo nuevamente.');
-        console.log(error);
-    });
-}
+  });

@@ -76,3 +76,17 @@
     margin-left: 0px;
     font-family: cursive;
   }
+
+  button[type="submit"] {
+    background-color: rgb(10, 110, 189);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color:  rgb(10, 110, 189);
+  }
