@@ -40,7 +40,11 @@ nav {
 	padding: 10px; /* Agrega un espacio alrededor del contenido */
   }
   
-  
+  nav  {
+	list-style-type: none; /* Quita los puntos de la lista */
+	margin: 0; /* Quita el margen */
+	padding: 0; /* Quita el espacio interno */
+  }
   
   nav a{
 	display: inline-block; /* Muestra los elementos en línea */
