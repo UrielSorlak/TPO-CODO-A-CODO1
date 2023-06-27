@@ -98,7 +98,7 @@
 }
 
 h1{
-  margin-left: 300px;
+  
   font-family: cursive;
 }
 
@@ -108,5 +108,5 @@ body{
 
 body{
   display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }

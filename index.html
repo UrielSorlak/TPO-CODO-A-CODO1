@@ -77,9 +77,9 @@
         <footer class="footer">
             <!-- Contenido del pie de página -->
             <h1>Receta Aleatoria</h1>
-            <div id="recipe-container">
-                <h2 id="recipe-name"></h2>
-                <p id="recipe-instructions"></p>
+            <div id="container_receta">
+                <h2 id="nombre_receta"></h2>
+                <p id="instrucciones_receta"></p>
             </div>
             <script>
                 $(document).ready(function() {
@@ -92,8 +92,8 @@
                             var recipeInstructions = recipe.strInstructions;
                             
                             // Mostrar el nombre de la receta y las instrucciones en tu página web
-                            $('#recipe-name').text(recipeName);
-                            $('#recipe-instructions').text(recipeInstructions);
+                            $('#nombre_receta').text(recipeName);
+                            $('#instrucciones_receta').text(recipeInstructions);
                         }
                     });
                 });
