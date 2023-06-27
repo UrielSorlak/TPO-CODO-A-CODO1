@@ -80,15 +80,13 @@
             <script>
                 $(document).ready(function() {
                     $.ajax({
-                        url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php', // Reemplaza con la URL de la API que deseas utilizar
+                        url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php', 
                         method: 'GET',
                         success: function(response) {
-                            // Manipula los datos recibidos de la API
-                            // Puedes acceder a los datos en la variable 'response'
-                            // Por ejemplo, puedes mostrar los nombres de las recetas en el elemento con id 'resultado-api'
+                            
                             var resultado = '';
-                            response.recetas.forEach(function(receta) {
-                                resultado += '<p>' + receta.nombre + '</p>';
+                            response.drinks.forEach(function(drinks) {
+                                resultado += '<p>' + drinks.nombre + '</p>';
                             });
                             $('#resultado-api').html(resultado);
                         },
