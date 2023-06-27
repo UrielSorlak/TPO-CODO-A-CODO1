@@ -32,7 +32,7 @@ footer {
 	text-align: center;
 }
 nav {
-	background-color: blue; /* Cambia el color de fondo a azul */
+	background-color: rgb(11, 11, 31); /* Cambia el color de fondo a azul */
 	display: inline-block; /* Hace que el elemento se comporte como un bloque en línea */
 	padding: 10px; /* Agrega un espacio interno alrededor del contenido */
   }
