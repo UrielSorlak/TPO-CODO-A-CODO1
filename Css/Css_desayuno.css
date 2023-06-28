@@ -91,3 +91,7 @@
   button[type="submit"]:hover {
     background-color: #853e8e;
   }
+  .video iframe {
+    width: 100%;
+    height: auto;
+  }

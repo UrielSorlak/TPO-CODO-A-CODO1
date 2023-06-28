@@ -90,3 +90,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: rgb(192, 127, 0)8e623e;
 }
+.video iframe {
+  width: 100%;
+  height: auto;
+}
