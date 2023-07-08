@@ -24,22 +24,26 @@
     <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
 
-    <form id="formulario-sugerencias">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required>
-        <br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
-        <br>
-        
-        <label for="opinion">Consulta:</label>
-        <textarea id="opinion" required></textarea>
-        <br>
-        
-        <button type="submit">Enviar</button>
+    <form name="contacto" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contacto">
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" required>
+        </div>
+        <div>
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" name="correo" id="correo" required>
+        </div>
+        <div>
+          <label for="opinion">Opinión:</label>
+          <textarea name="opinion" id="opinion" required></textarea>
+        </div>
+        <div>
+          <button type="submit">Enviar opinión</button>
+        </div>
       </form>
     <script src="validacion_formulario.js"></script>
+    <script src="contacto.js"></script>
 
     <h3>Correo electrónico:</h3>
     <p>Si prefieres enviarnos un correo electrónico, puedes hacerlo a la siguiente
