@@ -1,0 +1,96 @@
+.carousel {
+    width: 98%;  
+    overflow: hidden;
+    
+  }
+  
+  .carousel img {
+    width: 400px;
+    height: 300px;
+    float: left;
+    margin-left: 10px;
+    animation-timing-function: linear; 
+  }
+  
+  @keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.carousel img:nth-child(1) {
+    animation: slide 10s infinite;
+}
+.carousel img:nth-child(2) {
+    animation: slide 10s infinite;
+    animation-delay: -8s;
+}
+.carousel img:nth-child(3) {
+    animation: slide 10s infinite;
+    animation-delay: -6s;
+}
+.carousel img:nth-child(4) {
+    animation: slide 10s infinite;
+    animation-delay: -4s;
+}
+
+.carousel ul {
+  list-style: none;
+  width: 75%;
+  display: flex;
+  
+  
+  
+
+}
+.container{
+  background-color: rgb(255, 247, 212);
+}
+
+aside {
+  background-color: rgb(255, 217, 90);
+}
+
+main {
+  background-color: rgb(192, 127, 0);
+}
+header{
+  background-color: rgb(255, 217, 90);
+}
+footer{
+  background-color: rgb(76, 61, 61);
+  color: #ffffff;
+}
+
+.receta{ 
+  background-color: rgb(255, 217, 90) ;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.video {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1{
+  margin-left: 0px;
+  font-family: cursive;
+}
+button[type="submit"] {
+  background-color: rgb(192, 127, 0);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(192, 127, 0)8e623e;
+}
+.video iframe {
+  width: 100%;
+  height: auto;
+}
